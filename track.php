@@ -12,7 +12,7 @@ function returnImageGif() {
 }
 
 $imageid = $_GET['imgid'];
-if(!empty($imageid) && $_SERVER['REMOTE_ADDR'] !== '46.99.4.244') { // Exclude Google Mail Server
+if(!empty($imageid)) {
     file_put_contents('emails.db', $imageid, FILE_APPEND);
 }
 returnImageGif();
